@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <h1>Home page</h1>
+    <div>
+        <h1>Room created in discord</h1>
+        <div>
+            
+            {% for room in rooms  %}
+                <h3>{{room.id}} -- <a href="{% url 'room' room.id %}"> {{room.title}}</a></h3>
+            {% endfor %}
+                
+        </div>
+    </div>
+{% endblock  %}
+    

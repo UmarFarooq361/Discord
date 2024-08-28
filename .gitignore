@@ -1,0 +1,66 @@
+# Django specific files
+*.log
+*.pot
+*.pyc
+__pycache__/
+db.sqlite3
+*.sqlite3
+
+# Ignore the entire "migrations" folder except for __init__.py
+**/migrations/
+!**/migrations/__init__.py
+
+# Ignore local environment settings
+.env
+
+# Ignore compiled translation files
+*.mo
+
+# Python package files
+*.egg-info/
+.eggs/
+*.egg
+*.pyd
+*.so
+*.dll
+
+# VSCode specific files (if using VSCode)
+.vscode/
+
+# Ignore pyenv files
+.python-version
+
+# Ignore virtual environment folder
+venv/
+env/
+ENV/
+
+# Ignore static and media files (if applicable)
+staticfiles/
+media/
+
+# Ignore specific folders in your project
+discord/templates/
+discord/base/
+
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
