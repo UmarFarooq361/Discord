@@ -5,10 +5,16 @@
     <h1>Home page</h1>
     <div>
         <h1>Room created in discord</h1>
+        <a href="{% url 'create_room' %}">Create a new room</a>
+        <br>
         <div>
-            
             {% for room in rooms  %}
-                <h3>{{room.id}} -- <a href="{% url 'room' room.id %}"> {{room.title}}</a></h3>
+                <a href="{% url 'update_room' room.id %}">Edit</a>
+                <span>@{{room.host.username}}</span>
+                <h3>{{room.id}} -- <a href="{% url 'room' room.id %}"> {{room.name}}</a></h3>
+                <span>{{room.topic.name}}</span>
+                <a href="{% url 'delete_room' room.id %}">Delete</a>
+                <hr>
             {% endfor %}
                 
         </div>
