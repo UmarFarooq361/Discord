@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>umar farooq</h1>
+    
+    {% for room in allRoom %}
+        <a href="{% url 'room' room.id %}"><h3>{{room.name}}</h3></a>
+    {% endfor %}
+        
+
+{% endblock content %}
