@@ -2,7 +2,7 @@
 
 
 {% block content %}
-    <p>Are you sure you want to delete {{room}}</p>
+    <p>Are you sure you want to delete "{{obj}}"</p>
     <form action="" method="post">
         {% csrf_token %}
         <a href="{% url 'home' %}">Go Back</a>
