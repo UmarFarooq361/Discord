@@ -164,14 +164,14 @@ def deleteMessage(request, id):
 
         # Check if the user has any other messages in the room
         user_messages_in_room = room.message_set.filter(user=request.user)
-        print(user_messages_in_room.count())
-        print("umar")
+
 
         # If the user has no more messages in the room, remove them from participants
         if not user_messages_in_room:
             room.participants.remove(request.user)
 
-        return redirect('room', id=room.id)
+        return redirect('home')
+        # return redirect('room', id=room.id)
 
     context = {'obj': message}
     return render(request, "base/delete.html", context=context)
