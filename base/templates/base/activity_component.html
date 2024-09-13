@@ -36,13 +36,3 @@
   {% endfor %}
 
             
-
-    {% comment %} <div>
-        <small><a href="{% url 'profile' message.user.id %}">@{{message.user}} </a> {{message.created|timesince}} ago</small>
-        <p>Replied to ''</p>
-        <p>{{message}}</p>
-        {% if request.user == message.user %}
-            <a href="{% url 'deleteMessage' message.id %}">Delete</a>
-        {% endif %}
-        <hr>
-    </div> {% endcomment %}
