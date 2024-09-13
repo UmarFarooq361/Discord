@@ -18,23 +18,22 @@
                     </div>
                 </div>
                 <div class="layout__body">
-                    <form class="form" action="" method='POST'>
+                    <form class="form" action="" method='POST' enctype='multipart/form-data'>
                         {% csrf_token %}
                         
                         {% for field in  form %}
                             
                         <div class="form__group">
                             <label for="profile_pic">{{field.label}}</label>
-                            {% comment %} <input id="profile_pic" name="profile_pic" type="file" /> {% endcomment %}
                             {{field}}
                         </div>
                         {% endfor %}
 
             
                         {% comment %} <div class="form__group">
-                            <label for="user_bio">Bio</label>
-                            <textarea name="user_bio" id="user_bio" placeholder="Write about yourself..."></textarea>
-                        </div> {% endcomment %}
+                            <label for="user_bio">{{field.label}}</label>
+                            {{field}}
+                        </div>  {% endcomment %}
                         <div class="form__action">
                             <a class="btn btn--dark" href="{{request.META.HTTP_REFERER}}">Cancel</a>
                             <button class="btn btn--main" type="submit">Update</button>

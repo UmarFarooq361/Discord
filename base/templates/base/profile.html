@@ -15,7 +15,7 @@
         <div class="profile">
           <div class="profile__avatar">
             <div class="avatar avatar--large active">
-              <img src="https://randomuser.me/api/portraits/men/11.jpg" />
+              <img src="{{user.avatar.url}}" />
             </div>
           </div>
           <div class="profile__info">
@@ -30,14 +30,14 @@
           <div class="profile__about">
             <h3>About</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              {{user.bio}}
             </p>
           </div>
         </div>
 
         <div class="roomList__header">
           <div>
-            <h2>Study Rooms Hosted by {{user}}</a>
+            <h2>Study Rooms Hosted by {{user.username}}</a>
             </h2>
           </div>
         </div>

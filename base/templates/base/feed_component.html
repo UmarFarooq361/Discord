@@ -4,9 +4,9 @@
     <div class="roomListRoom__header">
       <a href="{% url 'profile' room.host.id %}" class="roomListRoom__author">
         <div class="avatar avatar--small">
-          <img src="https://randomuser.me/api/portraits/women/11.jpg" />
+          <img src="{{room.host.avatar.url}}" />
         </div>
-        <span>{{room.host}}</span>
+        <span>{{room.host.username}}</span>
       </a>
       <div class="roomListRoom__actions">
         <span>{{room.created|timesince}}</span>
@@ -42,21 +42,3 @@
   </div>
 
   {% endfor %}
-
-{% comment %} <div>
-    {% for room in rooms  %}
-        
-        {% if request.user == room.host %}
-        <a href="{% url 'update_room' room.id %}">Edit</a>
-        {% endif %}
-            
-        <span><a href="{% url 'profile' room.host.id %}">@{{room.host.username}}</a> </span>
-        <h3>{{room.id}} -- <a href="{% url 'room' room.id %}"> {{room.name}}</a></h3>
-        <span>{{room.topic.name}}</span>
-        {% if request.user == room.host %}
-        <a href="{% url 'delete_room' room.id %}">Delete</a>
-        {% endif %}
-        <hr>
-    {% endfor %}
-        
-</div> {% endcomment %}
